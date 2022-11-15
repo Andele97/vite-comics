@@ -6,23 +6,28 @@ export default {
       menu:[
         {
           text: 'digital comics',
-          href: '#'
+          href: '#',
+          icon: '../assets/img/buy-comics-digital-comics.png'
         },
         {
           text: 'dc merchandise',
-          href: '#'
+          href: '#',
+          icon: '../assets/img/buy-comics-merchandise.png'
         },
         {
           text: 'subscription',
-          href: '#'
+          href: '#',
+          icon: '../assets/img/buy-comics-subscriptions.png'
         },
         {
           text: 'comic shop locator',
-          href: '#'
+          href: '#',
+          icon: '../assets/img/buy-comics-shop-locator.png'
         },
         {
           text: 'dc power visa',
-          href: '#'
+          href: '#',
+          icon: '../assets/img/buy-dc-power-visa.svg'
         }
       ]
     }
@@ -46,7 +51,7 @@ export default {
             <li
             v-for="(link, index) in menu"
             :key="index"
-            ><a :href="link.href">{{link.text}}</a></li>
+            ><img :src="link.icon"><a :href="link.href">{{link.text}}</a></li>
           </ul>
         </nav>
       </div>
