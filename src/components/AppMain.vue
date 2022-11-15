@@ -7,27 +7,27 @@ export default {
         {
           text: 'digital comics',
           href: '#',
-          icon: '../assets/img/buy-comics-digital-comics.png'
+          icon: new URL('../assets/img/buy-comics-digital-comics.png', import.meta.url).href
         },
         {
           text: 'dc merchandise',
           href: '#',
-          icon: '../assets/img/buy-comics-merchandise.png'
+          icon: new URL('../assets/img/buy-comics-merchandise.png', import.meta.url).href
         },
         {
           text: 'subscription',
           href: '#',
-          icon: '../assets/img/buy-comics-subscriptions.png'
+          icon: new URL('../assets/img/buy-comics-subscriptions.png', import.meta.url).href
         },
         {
           text: 'comic shop locator',
           href: '#',
-          icon: '../assets/img/buy-comics-shop-locator.png'
+          icon: new URL('../assets/img/buy-comics-shop-locator.png', import.meta.url).href
         },
         {
           text: 'dc power visa',
           href: '#',
-          icon: '../assets/img/buy-dc-power-visa.svg'
+          icon: new URL('../assets/img/buy-dc-power-visa.svg', import.meta.url).href
         }
       ]
     }
@@ -81,11 +81,20 @@ export default {
     ul{
       list-style: none;
       @include centerFlex('evenly');
-    a{
-      text-decoration: none;
-      text-transform: uppercase;
-      color: white;
-    }
+      @include centerFlex('vertical');
+      li{
+        text-align: center;
+        @include centerFlex();
+        img{
+          width: 50px;
+        }
+        a{
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+          margin-left: 10px;
+        }
+      }
     }
   }
 

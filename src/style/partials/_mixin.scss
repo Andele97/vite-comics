@@ -13,5 +13,7 @@
   align-items: center;
 } @else if $type == 'evenly'{
   justify-content: space-evenly;
+} @else if $type == 'baseline'{
+  justify-content: baseline;
 }
 }
