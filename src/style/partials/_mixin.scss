@@ -15,5 +15,7 @@
   justify-content: space-evenly;
 } @else if $type == 'baseline'{
   justify-content: baseline;
+} @else if $type == 'wrap'{
+  flex-wrap: wrap;
 }
 }
