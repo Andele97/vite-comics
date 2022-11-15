@@ -95,7 +95,7 @@ header {
       margin-left: 30px;
       color: black;
       text-transform: uppercase;
-      padding-bottom: 20px;
+      padding-bottom: 60px;
       &:hover,
       &:active{
         color: #0282F9;
