@@ -58,6 +58,9 @@ export default {
         :cardImage="card.thumb"
         :cardTitle="card.series"
         />
+        <div>
+          <button>load more</button>
+        </div>
       </div>
     </section>
 
@@ -90,9 +93,34 @@ export default {
 
   .content {
     background-color: #1C1C1C;
-    @include centerFlex('vertical');
-    h2{
-      color: white;
+    position: relative;
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      .current{
+        color: white;
+        text-transform: uppercase;
+        padding: 10px;
+        height: 40px;
+        font-weight: bold;
+        background-color: #0282F9;
+        position: absolute;
+        top: -20px;
+        left: 300px;
+      }
+      button{
+        width: 200px;
+        height: 40px;
+        margin-top: 40px;
+        border: none;
+        background-color: #0282F9;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+      }
     }
   }
 

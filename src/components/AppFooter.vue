@@ -155,6 +155,7 @@ export default {
       font-size: 1.2em;
       img{
         margin-left: 10px;
+        cursor: pointer;
       }
     }
   }

@@ -13,22 +13,25 @@ export default {
     <div class="cover">
       <img :src="cardImage" :alt="cardTitle">
     </div>
-    <h4>{{cardTitle}}</h4>
+    <p>{{cardTitle}}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
   .card{
-    width: 200px;
-    height: 200px;
+    margin-top: 30px;
+    inline-size: 200px;
+    padding: 0 30px 0;
     cursor: pointer;
-    background-color: yellow;
     .cover{
-      height: 120px;
-      width: 120px;
-      .img{
+      width: 150px;
+      img{
         width: 100%;
       }
+    }
+    p{
+      color: white;
+      margin-top: 10px;
     }
   }
 </style>
