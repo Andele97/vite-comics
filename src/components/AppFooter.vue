@@ -64,11 +64,24 @@ export default {
             </nav>
           </div>
         </div>
-        <div class="image"></div>
       </div>
     </div>
 
-    <div class="footer-bottom"></div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="sign-up">
+          sign up
+        </div>
+        <div class="follow-us">
+          follow us
+          <img src="../assets/img/footer-facebook.png" alt="">
+          <img src="../assets/img/footer-twitter.png" alt="">
+          <img src="../assets/img/footer-youtube.png" alt="">
+          <img src="../assets/img/footer-pinterest.png" alt="">
+          <img src="../assets/img/footer-periscope.png" alt="">
+        </div>
+      </div>  
+    </div>
   </footer>
 </template>
 
@@ -99,6 +112,7 @@ export default {
             color: white;
             text-transform: uppercase;
             margin-bottom: 10px;
+            font-size: 1.3em;
           }
           ul{
             list-style: none;
@@ -119,5 +133,29 @@ export default {
   .footer-bottom {
     height: 110px;
     background-color: #303030;
+    .container{
+      height: 100%;
+      @include centerFlex('between');
+      .sign-up{
+        padding: 20px;
+        width: 150px;
+        border: 4px solid #0282F9;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    .follow-us{
+      color: #0282F9;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      img{
+        margin-left: 10px;
+      }
+    }
   }
 </style>

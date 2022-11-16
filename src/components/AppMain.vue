@@ -1,8 +1,16 @@
 <script>
+
+import CardComics from './CardComics.vue';
+import datacomics from '../data/datacomics';
+
 export default {
   name: 'AppMain',
+  components: {
+    CardComics
+  },
   data(){
     return{
+      datacomics,
       menu:[
         {
           text: 'digital comics',
@@ -38,9 +46,18 @@ export default {
 <template>
   <main>
 
+    <div class="jumbotron"></div>
     <section class="content">
       <div class="container">
-        <h2>--> Content goes here</h2>
+        <div class="current">
+          current series
+        </div>
+        <CardComics
+        v-for="(card, index) in datacomics"
+        :key="index"
+        :cardImage="card.thumb"
+        :cardTitle="card.series"
+        />
       </div>
     </section>
 
@@ -65,8 +82,13 @@ export default {
 @use '../style/general' as *;
 @use '../style/partials/mixin' as *;
 
+  .jumbotron{
+    height: 400px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
+  }
+
   .content {
-    height: 130px;
     background-color: #1C1C1C;
     @include centerFlex('vertical');
     h2{
