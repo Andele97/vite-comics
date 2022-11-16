@@ -83,13 +83,18 @@ export default {
     background-size: cover;
     .container{
       @include centerFlex('between');
+      height: 100%;
+      background-image: url(../assets/img/dc-logo-bg.png);
+      background-repeat: no-repeat;
+      background-position: right; 
       .cont-link{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        height: 300px;
         .link{
-          background-color: yellow;
-          width: 150px;
-          height: 90px;
+          margin-top: 20px;
+          margin-right: 20px;
           h4{
             color: white;
             text-transform: uppercase;
@@ -107,12 +112,6 @@ export default {
             }
           }
         }
-      }
-      .image{
-        height: 100%;
-        background-image: url(../assets/img/dc-logo-bg.png);
-        background-repeat: no-repeat;
-        background-position: right; 
       }
     }
   }
